@@ -1,0 +1,596 @@
+/* css reset */
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global style */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #ff1e56;
+}
+
+main {
+    margin-top: 78px;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.tentang, .portofolio, .sertifikasi, .kontak {
+    padding: 100px;
+}
+
+.section-title {
+    font-size: 28px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+/* header */
+header {
+    padding: 20px 100px 20px 100px;
+    display: inline-block;
+    width: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+}
+
+header h1 a {
+    float: left;
+    color: #ffac41;
+}
+
+header h1 a:hover {
+    color: #ffac41;
+}
+
+/* navigasi menu */
+nav {
+    float: right;
+}
+
+nav ul {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+}
+
+nav li {
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav ul li a {
+    color: #ffac41;
+}
+
+/* scrolling active */
+.scrolling-active {
+    box-shadow: 0 3px 1rem rgba(128, 128, 128);
+}
+
+/* scroll color animation */
+nav ul li.active a{
+    color: #ff1e56;
+}
+
+/* hamburger menu */
+
+.openMenu {
+    font-size:30px;
+    cursor:pointer;
+    color: #ffac41;
+    display: none;
+}
+
+.overlay .closebtn {
+    color: #ffac41;
+}
+
+.overlay .overlay-content a{
+    color: #ffac41;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 25%;
+    width: 100%;
+    margin-top: -20px;
+}
+  
+.overlay a {
+    text-decoration: none;
+    font-size: 36px;
+    color: #ff1e56;
+    display: block;
+    transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: #ff1e56;
+}
+  
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* popup gallery */
+.lb-loader, .lightbox { 
+    text-align: center;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+} 
+
+body.lb-disable-scrolling {
+    overflow: hidden;
+}
+
+.lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #000;
+    filter: alpha(Opacity=80);
+    opacity: .8;
+    display: none;
+}
+
+.lightbox {
+    width: 100%;
+    z-index: 10000;
+    font-weight: 400;
+    outline: 0;
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+}
+
+.lightbox a img {
+    border: none;
+}
+
+.lb-outerContainer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-loader {
+    top: 43%;
+    height: 25%;
+    width: 100%;
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(../assets/loading.gif) no-repeat;
+}
+
+.lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.lb-container>.nav {
+    left: 0;
+}
+
+.lb-nav a {
+    outline: 0;
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+}
+
+.lb-next, .lb-prev {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(../assets/prev.png) left 48% no-repeat;
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    transition: opacity .6s;
+}
+
+.lb-nav a.lb-prev:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(../assets/next.png) right 48% no-repeat;
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    transition: opacity .6s;
+}
+
+.lb-nav a.lb-next:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-data {
+    padding: 0 4px;
+    color: #ccc;
+}
+
+.lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+    color: #4ae;
+}
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999;
+}
+
+.lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(../assets/close.png) top right no-repeat;
+    text-align: right;
+    outline: 0;
+    filter: alpha(Opacity=70);
+    opacity: .7;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: alpha(Opacity=100);
+    opacity: 1;
+}
+
+/* section banner */
+.banner {
+    text-align: center;
+    background: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80") rgba(0, 0, 0, 0.1);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: bottom;
+    padding: 50px 0;
+}
+
+.banner-content {
+    /* background: rgba(255, 255, 255, 0.5); */
+    background-color: rgba(0,0,0, 0.9);
+    padding: 50px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.banner-content h2, .banner-content p {
+    margin-bottom: 15px;
+    color: #ffac41;
+}
+
+.banner-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.github, .instagram, .linkedin, .whatsapp, .facebook, .telegram {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    /* background-color: #ebebeb; */
+    background-color: black;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.github .circle, .instagram .circle, .linkedin .circle, .whatsapp .circle, .facebook .circle, .telegram .circle {
+    border-radius: 50%;
+}
+
+
+/* section tentang saya */
+.tentang {
+    background-color: ghostwhite;
+}
+
+.tentang .wrapper {
+    align-items: center;
+}
+
+.kanan, .kiri {
+    width: 50%;
+    padding: 30px 0;
+}
+
+.kanan {
+    padding-left: 15px;
+    text-align: justify;
+}
+
+.kiri {
+    padding-right: 15px;
+}
+
+.tentang .kanan ol li {
+    font-size: 16px;
+}
+
+.tentang .kanan ol {
+    margin-left: 15px;
+}
+ 
+
+/* section portofolio */
+.portofolio {
+    background-color: black;
+    color: #ffac41;
+}
+
+.portofolio h2 {
+    color: #ffac41;
+}
+
+.portofolio .wrapper {
+    align-items: center;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.porto-title {
+    font-weight: 300;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.porto-card {
+    text-align: center;
+    width: 23%;
+}
+
+.porto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portofolio a {
+    color: #ffac41;
+}
+
+.portofolio a:hover {
+    color: #ff1e56;
+}
+
+/* section nilai & sertifikasi */
+.sertifikasi {
+    background-color: ghostwhite;
+}
+
+.sertifikasi .sololearn.wrapper, .sertifikasi .progate.wrapper, .sertifikasi .lainnya.wrapper{
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.sololearn-title, .progate-title, .lainnya-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.sertifikasi img {
+    width: 300px;
+    height: 200px;
+}
+
+.sertifikasi .sololearn .wrapper, .sertifikasi .progate .wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 140px;
+    row-gap: 50px;
+}
+
+.sertifikasi .lainnya .wrapper {
+    justify-content: flex-start;
+    column-gap: 140px;
+}
+
+/* section kontak */
+.kontak {
+    min-height: 80vh;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: top;
+    color: #ffac41;
+    background-color: black;
+}
+
+.kontak h2 {
+    color: #ffac41;
+}
+
+.kontak .section-title {
+    margin-bottom: 30px;
+}
+
+.kontak-box {
+    padding: 20px 50px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.kontak input, .kontak textarea {
+    width: 100%;
+    margin-left: 10px;
+    background-color: black;
+    color: #ffac41;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+
+.kontak-name, .kontak-email, .kontak-pesan {
+    background-color: black; 
+    color:  #ffac41; 
+    border: 2px solid #ffac41; 
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.kontak-pesan {
+    border-radius: 8px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ffac41;
+}
+
+.btn-kontak {
+    background-color: black;
+    color: #ffac41;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #ffac41;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-kontak .fa-envelope {
+    margin-right: 10px;
+    color: #ffac41;
+}
+
+/* footer */
+footer {
+    border-top: 1px solid #ffac41;
+    padding: 20px 0;
+    text-align: center;
+    background-color: black;
+    font-size: 12px;
+    color: #ffac41;
+}
+

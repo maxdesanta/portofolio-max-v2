@@ -1,0 +1,136 @@
+@media screen and (max-width: 650px){
+    /* global */
+    .tentang, .portofolio, .sertifikasi, .kontak { 
+        padding: 130px 50px 75px 50px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    /* header */
+    header {
+        padding: 20px 50px;
+        text-align: center;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    nav {
+        float: none;
+    }
+
+    /* hamburger menu */
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    
+    .openMenu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .overlay a {
+        font-size: 30px;
+    }
+
+    .overlay a {
+        margin-bottom: 50px;
+    }
+    
+    /* main */
+    main {
+        margin-top: 112px;
+    }
+
+    /* section banner */
+    .banner {
+        padding: 30px 0;
+        margin-top: -34px;
+    }
+
+    .banner-content {
+        padding: 30px;
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .banner-content h2 {
+        font-size: 20px;
+    }
+
+    .banner-content p {
+        font-size: 14px;
+    }
+
+    .github, .instagram, .linkedin, .whatsapp, .facebook, .telegram {
+        width: 40px;
+        height: 40px;
+    }
+
+    .telegram {
+        margin-top: 15px;
+    }
+    
+    /* section tentang saya */
+    .tentang .wrapper {
+        flex-direction: column;
+    }
+
+    .kanan, .kiri {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .kanan p {
+        font-size: 14px;
+    }
+
+    .kanan ol li {
+        font-size: 14px;
+    }
+
+    /* section portofolio */
+    .portofolio .wrapper {
+        flex-direction: column;
+    }
+
+    .porto-card {
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    .porto-card img {
+        max-height: 400px;
+        height: 40vh;
+    }
+
+    /* section sertifikasi */
+    .sertifikasi .sololearn.wrapper {
+        margin-top: 30px;
+    }
+
+    .sertifikasi .progate .wrapper {
+        margin-left: 2px;
+    }
+    
+    .sertifikasi .lainnya .wrapper {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    /* section kontak */
+    .kontak {
+        min-height: 100vh;
+    }
+}

@@ -1,0 +1,64 @@
+
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.flex-container-row {
+    display: flex;
+}
+
+.button {
+    cursor: pointer;
+    flex-basis: 25%;
+    font-size: 20px;
+    text-align: center;
+    /* background-color: #173F5F; 
+    color: #F8F8FF; */
+
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.double {
+    flex-basis: 50%;
+}
+
+.card {
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.display {
+    width: 100%;
+    padding: 10px 20px;
+    /* background-color: #173F5F; */
+    border: 1px solid black;
+    /* border: 1px solid rgb(248,248,248)   */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.operator, .negative, .equals {
+    /* background-color: #ED553B; 
+    color: #F8F8FF; */
+    background-color: black;
+    color: #ffac41;
+}
+
+.button:hover {
+    font-weight: bold;
+    /* background-color: #F6D55C; */
+    background-color: #808080;
+}
+
+/* button kalkulator */
+
+.button {
+    padding: 40px 10px;
+}
