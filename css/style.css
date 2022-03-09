@@ -379,6 +379,10 @@ body.lb-disable-scrolling {
     margin: 0 auto;
 }
 
+.banner-content h2 {
+    font-size: 32px;
+}
+
 .banner-content h2, .banner-content p {
     margin-bottom: 15px;
     color: #ffac41;
@@ -500,21 +504,16 @@ body.lb-disable-scrolling {
 }
 
 .sertifikasi img {
-    width: 300px;
-    height: 200px;
+    width: 250px;
 }
 
-.sertifikasi .sololearn .wrapper, .sertifikasi .progate .wrapper {
+.sertifikasi .sololearn .wrapper, .sertifikasi .progate .wrapper, .sertifikasi .lainnya .wrapper {
     flex-wrap: wrap;
     justify-content: flex-start;
-    column-gap: 140px;
+    column-gap: 40px;
     row-gap: 50px;
 }
 
-.sertifikasi .lainnya .wrapper {
-    justify-content: flex-start;
-    column-gap: 140px;
-}
 
 /* section kontak */
 .kontak {
