@@ -2,7 +2,7 @@
 const open = document.getElementById('open');
 const close = document.getElementById('close');
 const sections = document.querySelectorAll('section');
-const nav = document.querySelectorAll('nav ul li')
+const nav = document.querySelectorAll('nav ul li');
 
 // proses menu hamburger
 
